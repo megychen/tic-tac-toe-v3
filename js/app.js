@@ -91,9 +91,11 @@
       $(".board").hide();
       $playerWinPage.show();
       if(currentPlayer1()) {
+        $playerWinPage.removeClass("screen-win-two");
         $playerWinPage.addClass("screen-win-one");
         $(".message").text(inputName + " winner");
       } else if(currentPlayer2()) {
+        $playerWinPage.removeClass("screen-win-one");
         $playerWinPage.addClass("screen-win-two");
         $(".message").text("Winner");
       }
@@ -159,7 +161,8 @@
     $playerWinPage.hide(); // when enter game again, hide the win page
     $playerDrawPage.hide(); // when enter game again, hide the draw page
     $(".board").show();
-    box.removeClass("box-filled-1").removeClass("box-filled-2"); //when enter game again, remove all class of box
+    box.removeClass("box-filled-1"); //when enter game again, remove all class of box
+    box.removeClass("box-filled-2");
     $(".showName").text(inputName);
     player1.addClass("active"); // Add class and let player1 active at start
     player2.removeClass("active"); // Remove last added class for player2 when game over
