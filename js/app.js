@@ -1,3 +1,5 @@
+ // No issue for Google chrome, Firefox, Safari and Opera, they all support well
+
 (function() {
     var $startUpPage = $('<div class="screen screen-start" id="start"><header><h1>Tic Tac Toe</h1><br><br><div class="playerName"><input type="text" placeholder="Please enter your name" size="30%"><br><br><a href="#" class="button">Start game</a></header></div>');
     var $playerWinPage = $('<div class="screen screen-win" id="finish"><header><h1>Tic Tac Toe</h1><p class="message"></p><a href="#" class="button">New game</a></header></div>').hide();
