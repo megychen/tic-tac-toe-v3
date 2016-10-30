@@ -90,12 +90,11 @@
     var showWinScreen = function() {
       $(".board").hide();
       $playerWinPage.show();
+      $playerWinPage.removeClass("screen-win-one screen-win-two");
       if(currentPlayer1()) {
-        $playerWinPage.removeClass("screen-win-two");
         $playerWinPage.addClass("screen-win-one");
         $(".message").text(inputName + " winner");
       } else if(currentPlayer2()) {
-        $playerWinPage.removeClass("screen-win-one");
         $playerWinPage.addClass("screen-win-two");
         $(".message").text("Winner");
       }
